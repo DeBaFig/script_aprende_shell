@@ -105,7 +105,7 @@ introducao_menu (){
     echo
     echo "Quando você terminar acesse o menu de comandos para "
     echo "aprender mais :) "
-    ./helpers.sh "repete" 3
+    ./helpers.sh "repete" 2
     ./helpers.sh "enter"
     ./helpers.sh "pergunta" "Digite o comando que você pode ver o manual do ls" "man ls" "Tenta escrever: man ls"
     man ls
