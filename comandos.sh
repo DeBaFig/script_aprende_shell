@@ -14,9 +14,41 @@ comando_pwd (){
     ./helpers.sh "enter"
 }
 
+comando_cd (){
+    clear
+    echo "cd - Changing Directories"
+    echo 
+    echo "Você pode mudar de diretório em que você está trabalhando"
+    echo "(atual) para outro diretório especificado no argumento"
+    echo
+    echo "-> caso não adicione nenhum argumento, você irá para o"
+    echo "diretório 'home' do usuário"
+    echo
+    echo "É interessante observar que o comando 'cd' não gera nenhum"
+    echo "tipo de confirmação mesmo que tenha sido bem sucedido."
+    echo "Alias a maioria dos comandos não tem output desnecessarios"
+    ./helpers.sh "repete" 3
+    ./helpers.sh "enter"
+    
+}
+
+comando_whoami (){
+    clear
+    echo "whoami - Who am I"
+    echo 
+    echo "Esse comando mostra seu identificação de usuário."
+    echo "Que tal testar o comando?"
+    ./helpers.sh "repete" 10
+    ./helpers.sh "enter"
+    ./helpers.sh "pergunta" "Digite o comando que mostra seu usuário" "whoami" "Tenta escrever: whoami"
+    echo "output: "
+    whoami    
+    ./helpers.sh "repete" 14
+    ./helpers.sh "enter"
+}
 comando_ls (){
     clear
-    echo "ls - Lsiting Files"
+    echo "ls - Listing Files"
     echo 
     echo "O output desse comando mostra uma lista dos arquivos que estão"
     echo "diretório/pasta que você passar como argumento, ou caso não"
@@ -37,18 +69,22 @@ comando_ls (){
     mkdir -p pasta1/pasta2/arquivo.txt
     ls -R pasta1
     rm -r pasta1
-    ./helpers.sh "repete" 6
+    ./helpers.sh "repete" 2
     ./helpers.sh "enter"
     echo "ls -l"
     echo
-    echo "O comando ls sozinho mostra os nomes dos arquivos somente"
+    echo "O comando ls sozinho mostra somente os nomes dos arquivos,"
     echo "porém se você quiser mais informação sobre cada um dos"
     echo "arquivos, você pode usar o comando 'ls -l'"
     echo
-    echo "muito útil principalmente para informações de permissões,"
+    echo "Muito útil principalmente para informações de permissões,"
     echo "criação, etc..."
+    echo "Exemplo:"
+    touch teste.txt
+    ls -l
     ./helpers.sh "repete" 6
     ./helpers.sh "enter"
+    rm teste.txt
 }
 
 comandos_menu (){
@@ -73,10 +109,10 @@ comandos_menu (){
             comando_ls
         fi
         if [ "$line" = "3" ]; then
-            echo "Opcao 3"
+            comando_cd
         fi
         if [ "$line" = "4" ]; then
-            echo "Opcao 4"
+            comando_whoami
         fi
         if [ "$line" = "5" ]; then
             echo "Opcao 5"
