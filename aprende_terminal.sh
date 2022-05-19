@@ -1,19 +1,11 @@
 #!/bin/bash
-comandos_menu () {
-    while [ true ]; do
-        echo "Digite a opção desejada ou q para sair do script: "
-        read line
-        if [ "$line" = "1" ]; then
-            echo "Opcao 1"
-        fi
-        if [ "$line" = "2" ]; then
-            echo "Opcao 2"
-        fi
-        if [ "$line" = "q" ]; then
-            exit 0
-        fi
-    done
-}
+####################################
+#
+# Menu principal e inicio do script
+#
+####################################
+
+
 menu_principal () {
     clear
     nome=$(whoami)

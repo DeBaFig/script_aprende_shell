@@ -1,3 +1,11 @@
+#!/bin/bash
+####################################
+#
+# Explicação sobre CLI GUI e comandos
+# versão 1.0 - Denize B Figueiredo
+# 
+####################################
+
 introducao_menu (){
     clear
     echo "INTRODUÇÃO A CLI"

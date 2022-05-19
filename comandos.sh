@@ -1,3 +1,13 @@
+#!/bin/bash
+####################################
+#
+# Explicação dos comandos básicos
+# alguns exercícios ao final 
+# da função
+#
+####################################
+
+
 comando_pwd (){
     clear
     echo "pwd - Print Working Directory"
@@ -14,38 +24,6 @@ comando_pwd (){
     ./helpers.sh "enter"
 }
 
-comando_cd (){
-    clear
-    echo "cd - Changing Directories"
-    echo 
-    echo "Você pode mudar de diretório em que você está trabalhando"
-    echo "(atual) para outro diretório especificado no argumento"
-    echo
-    echo "-> caso não adicione nenhum argumento, você irá para o"
-    echo "diretório 'home' do usuário"
-    echo
-    echo "É interessante observar que o comando 'cd' não gera nenhum"
-    echo "tipo de confirmação mesmo que tenha sido bem sucedido."
-    echo "Alias a maioria dos comandos não tem output desnecessarios"
-    ./helpers.sh "repete" 3
-    ./helpers.sh "enter"
-    
-}
-
-comando_whoami (){
-    clear
-    echo "whoami - Who am I"
-    echo 
-    echo "Esse comando mostra seu identificação de usuário."
-    echo "Que tal testar o comando?"
-    ./helpers.sh "repete" 10
-    ./helpers.sh "enter"
-    ./helpers.sh "pergunta" "Digite o comando que mostra seu usuário" "whoami" "Tenta escrever: whoami"
-    echo "output: "
-    whoami    
-    ./helpers.sh "repete" 14
-    ./helpers.sh "enter"
-}
 comando_ls (){
     clear
     echo "ls - Listing Files"
@@ -80,13 +58,75 @@ comando_ls (){
     echo "Muito útil principalmente para informações de permissões,"
     echo "criação, etc..."
     echo "Exemplo:"
-    touch teste.txt
-    ls -l
+    mkdir -p pasta1/teste.txt
+    ls -l pasta1
     ./helpers.sh "repete" 6
     ./helpers.sh "enter"
-    rm teste.txt
+    rm -r pasta1
 }
 
+comando_cd (){
+    clear
+    echo "cd - Changing Directories"
+    echo 
+    echo "Você pode mudar de diretório em que você está trabalhando"
+    echo "(atual) para outro diretório especificado no argumento"
+    echo
+    echo "-> caso não adicione nenhum argumento, você irá para o"
+    echo "diretório 'home' do usuário"
+    echo
+    echo "É interessante observar que o comando 'cd' não gera nenhum"
+    echo "tipo de confirmação mesmo que tenha sido bem sucedido."
+    echo
+    echo "Alias a maioria dos comandos não tem outputs desnecessarios"
+    ./helpers.sh "repete" 2
+    ./helpers.sh "enter"
+    
+}
+
+comando_whoami (){
+    clear
+    echo "whoami - Who am I"
+    echo 
+    echo "Esse comando mostra seu identificação de usuário."
+    echo "Que tal testar o comando?"
+    ./helpers.sh "repete" 10
+    ./helpers.sh "enter"
+    ./helpers.sh "pergunta" "Digite o comando que mostra seu usuário" "whoami" "Tenta escrever: whoami"
+    echo "output: "
+    whoami    
+    ./helpers.sh "repete" 14
+    ./helpers.sh "enter"
+}
+
+comando_touch (){
+    clear
+    echo "touch - Cria um arquivo"
+    echo 
+    echo "O comando exige um argumento pelo menos, que será o nome"
+    echo "do arquivo criado, uma vez que criado o arquivo vem vazio"
+    echo "Se for adicionado mais argumentos esse será usado para criar"
+    echo "mais arquivos"
+    ./helpers.sh "repete" 9
+    ./helpers.sh "enter"
+    ./helpers.sh "pergunta" "Que tal criar um arquivo com o nome: 'teste123.txt'" "touch teste123.txt" "Tenta digitar touch e o nome do arquivo"
+}
+
+comando_date (){
+    clear
+    echo "date - Cria um arquivo"
+    echo 
+    echo "O comando exige um argumento pelo menos, que será o nome"
+    echo "do arquivo criado, uma vez que criado o arquivo vem vazio"
+    echo "Se for adicionado mais argumentos esse será usado para criar"
+    echo "mais arquivos"
+    ./helpers.sh "repete" 9
+    ./helpers.sh "enter"
+    ./helpers.sh "pergunta" "Que tal criar um arquivo com o nome: 'teste123.txt'" "touch teste123.txt" "Tenta digitar touch e o nome do arquivo"
+}
+
+
+# menu com os comandos em questão
 comandos_menu (){
     clear
     nome=$(whoami)
@@ -96,7 +136,7 @@ comandos_menu (){
         echo "2. ls"
         echo "3. cd"
         echo "4. whoami"
-        echo "5. who"
+        echo "5. touch"
         echo "6. date"
         echo "7. cal"
         ./helpers.sh "repete" 6
@@ -115,7 +155,7 @@ comandos_menu (){
             comando_whoami
         fi
         if [ "$line" = "5" ]; then
-            echo "Opcao 5"
+            comando_touch
         fi
         if [ "$line" = "6" ]; then
             echo "Opcao 6"

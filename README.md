@@ -11,10 +11,14 @@
       
 
 ## Sobre
+
+Esse script foi escrito baseado nas aulas que pude participar de Unix/Linux no Seneca College, como o contéudo era inglês e obviamente não tenho acesso ao script em si, foi um desafio transportar para uma versão simplista do que eu imagino ser aquele script usado como assigment.  
+O script é feito em bash, mas tenho usado o Ubuntu para testar, que é dash, então as instruções de instalação serão feitas para quem não tem ainda ubuntu instalado, usa windows e nunca usou nenhum sistema unix.  
+Caso você não se encaixe nessas categorias que tal pular pra [execução](#como-executar)?
+
 ## Como instalar
 ## Como executar
 ## Tecnologias
-## Autora
 ## Autora
 
 **Denize**

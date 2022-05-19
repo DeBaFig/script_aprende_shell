@@ -1,21 +1,14 @@
 #!/bin/bash
+####################################
+#
+# Funções auxiliares para evitar
+# repetições desnecessárias
+#
+####################################
 
-
-continua_while () {
-    while [ true ]; do
-        repete "60" "~"
-        echo "Digite: 'q'(sair) ou <ENTER>(continuar): "
-        read line
-        if [ "$line" = "q" ]; then
-            clear
-            exit 1
-        fi
-        if [ "$line" = "" ]; then
-            clear
-            break;
-        fi
-    done
-}
+# Função aguarda um enter para ir para proxima
+# página, importante para leitura com calma
+# e organizar a página num número máx de linhas
 espera_enter () {
     while [ true ]; do
         repete "70" "~"
@@ -28,6 +21,9 @@ espera_enter () {
     done
 }
 
+# Função que permite pular linha vazia e
+# também fazer uma linha de repetição 
+# para separar o contéudo
 repete () {
     local start=1
     local end=${1:-80}
@@ -41,7 +37,8 @@ repete () {
     fi
     echo
 }
-
+# Função para verificar se o input
+# é igual ao enviado no argumento 2
 pergunta_comando () {
     while [ true ]; do
         echo "${1}"
@@ -67,9 +64,9 @@ pergunta_comando () {
     done
 }
 
-if [ "$1" = "continue" ]; then
-    continua_while
-fi
+# essas condicionais permitem que eu chame
+# o script definindo via argumento 1 
+# qual script vai rodar
 if [ "$1" = "repete" ]; then
     if [ $# = 3 ]; then
         repete $2 $3
@@ -79,7 +76,6 @@ if [ "$1" = "repete" ]; then
 fi
 if [ "$1" = "pergunta" ]; then
         pergunta_comando "${2}" "${3}" "${4}"
-        espera_enter
 fi
 if [ "$1" = "enter" ]; then
         espera_enter
