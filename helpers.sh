@@ -41,7 +41,7 @@ repete () {
 # é igual ao enviado no argumento 2
 pergunta_comando () {
     while [ true ]; do
-        echo "${1}"
+        echo -e "${1}"
         repete "13"
         echo "('q' para sair) Digite o comando abaixo:"
         read line
@@ -63,6 +63,7 @@ pergunta_comando () {
         fi
     done
 }
+
 
 # essas condicionais permitem que eu chame
 # o script definindo via argumento 1 

@@ -92,12 +92,12 @@ introducao_menu (){
     echo " 1- O comando(ls,cd,pwd, etc)"
     echo " 2- A opção acompanhada de um hifen(-a,-p, etc)  "
     echo " 3- O argumento(pode ser um caminho, um texto uma opção)"
+    echo "ou seja, COMANDO [opção] [argumento] [argumento] ..."
     echo
     echo "Exemplo: 'ls' é o comando que mostra uma lista dos nomes"
     echo "dos arquivos na pasta atual."
     echo "Porém se você digitar 'ls -l' você vai ver uma lista"
     echo "detalhada dos arquivos na pasta atual."
-    echo
     echo
     ./helpers.sh "enter"
     echo "Outro exemplo pode ser 'ls -l /bin' , esse comando"
@@ -119,8 +119,8 @@ introducao_menu (){
     man ls
     clear
     echo "Agora podemos começar a ver alguns comandos."
-    
+    ./helpers.sh "repete" 13
+    ./helpers.sh "enter"
 }
 
 introducao_menu
-clear

@@ -10,9 +10,10 @@ menu_principal () {
     clear
     nome=$(whoami)
     while [ true ]; do
+        clear
         echo "Bem-vindo(a) ${nome}!"
         echo "1. Introdução ao Terminal"
-        echo "2. Comandos"
+        echo "2. Comandos Básicos I"
         echo "3. Exercícios de comandos"
         echo "Digite a opção desejada ou q para sair: "
         ./helpers.sh "repete" 10
