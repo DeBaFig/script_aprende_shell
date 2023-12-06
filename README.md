@@ -24,9 +24,27 @@ O script shell é feito em bash, mas tenho usado o Ubuntu para testar, que é [d
 Caso você não se encaixe nessas categorias que tal pular pra [execução](#como-executar)?
 
 ## Objetivo
+
+Exercitar script e ajudar quem quiser aprender comandos
+
 ## Como instalar
+
+ * Copiar o repositório ou abrir um codeSpace.
+ * Abrir o bash no terminal do IDE (usando o visual studio code pode usar o atalho: CTRL+ ')
+ * Liberar as permissões do arquivos:
+ ```bash
+ chmod 777 aprende_terminal.sh
+ chmod 777 comandos.sh
+ chmod 777 helpers.sh
+ chmod 777 introducao.sh
+ ```
+
 ## Como executar
-## Tecnologias
+
+ ```bash
+./aprende_terminal.sh
+ ```
+
 ## Autora
 
 **Denize**
