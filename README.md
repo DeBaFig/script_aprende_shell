@@ -29,9 +29,11 @@ Exercitar script e ajudar quem quiser aprender comandos
 
 ## Como instalar
 
+![codespace](https://github.com/DeBaFig/script_aprende_shell/assets/46844031/f64a90c5-fbf9-40c2-a6c9-9af3661c31ad)
+
  * Copiar o repositório ou abrir um codeSpace.
  * Abrir o bash no terminal do IDE (usando o visual studio code pode usar o atalho: CTRL+ ')
- * Liberar as permissões do arquivos:
+ * Liberar as permissões do arquivos (se precisar):
  ```bash
  chmod 777 aprende_terminal.sh
  chmod 777 comandos.sh
@@ -44,6 +46,8 @@ Exercitar script e ajudar quem quiser aprender comandos
  ```bash
 ./aprende_terminal.sh
  ```
+Se chegar nessa tela abaixo é sinal de que conseguiu rodar com sucesso!
+![inicio](https://github.com/DeBaFig/script_aprende_shell/assets/46844031/922a63cb-57da-44d5-8ecd-8e9a66efc583)
 
 ## Autora
 
